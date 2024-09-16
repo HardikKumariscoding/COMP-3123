@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*Q1 Rewrite the following code block using ES6 syntax, ie. const, let, arrow function, template literals
+and for..of*/
+
+const greeter = (myArray, counter) => {
+    const greetText = 'Hello ';
+
+    myArray.forEach(item => {
+        console.log(greetText + item);
+    });
+};
+
+// greeter(['Randy Savage', 'Ric Flair', 'Hulk Hogan'], 3);
+
+
+
+
+
+/* Q2 Using destructuring assignment syntax and the spread operator, write a function will capitalize the
+first letter of a string.*/
+
+
+    const capitalize = ([first, ...rest]) => {
+    return first.toUpperCase() + rest.join('');
+};
+// console.log(capitalize('fooBar'));
+// console.log(capitalize('nodeJs'));
+/* Q3 Using array.proto.map create function to use the capitalize method in Exercise 2 to upper case
+the first character of each Color in the following array..
+
+*/
+
+const colors = ['red','green','blue']
+const capitalizedcolors = colors.map(color => capitalize(color))
+
+// console.log(capitalizedcolors)
+
+
+/*Q4 Using array.proto.filter create a function that will filter out all the values of the array that are less
+than twenty.*/
+var values = [1,60,34,30,20,5]
+const filterLessthan20 = values.filter(value => value < 20)
+
+// console.log(filterLessthan20)
+
+
+/*Q5 Using array.proto.reduce create calculate the sum and product of a given array.*/
+
+var array = [1,2,3,4]
+
+const sum = array.reduce((accumulator,currentValue)=>{
+return accumulator + currentValue
+},)
+// console.log("sum = " + sum)
+const product = array.reduce((accumulator,currentValue)=>{
+return accumulator * currentValue
+},)
+// console.log("product = " + product)
+
+
+/*Q6
+Using ES6 syntax for class and subclass using extends to create a Sedan subclass which derives
+from Car Class. The parameters for the Car class is the model and year. The parameters for the
+subclass is the model, year and balance.
+• Use the super key word in the Sedan subclass to set the model and name in base Car
+constructor.
+ */
+
+class Car{
+    constructor(model,year){
+        this.model = model;
+        this.year = year
+    }
+
+    info(){
+        return `Model: ${this.model}, Year: ${this.year}`;
+    }
+}
+
+class Sedan extends Car{
+    constructor(model,year,balance){
+        super(model,year);
+        this.balance = balance;
+    }
+
+    info(){
+        return `${super.info()},Balance: ${this.balance}`
+    }
+}
+
+const car2 = new Car('Pontiac firebird',1976);
+console.log(car2.info())
+
+const sedan = new Sedan('Volvo SD',2018,30000)
+console.log(sedan.info())
+
+
+
+</script>
+</html>
