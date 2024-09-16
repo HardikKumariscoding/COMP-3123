@@ -20,7 +20,7 @@ const greeter = (myArray, counter) => {
     });
 };
 
-// greeter(['Randy Savage', 'Ric Flair', 'Hulk Hogan'], 3);
+ greeter(['Randy Savage', 'Ric Flair', 'Hulk Hogan'], 3);
 
 
 
@@ -33,8 +33,8 @@ first letter of a string.*/
     const capitalize = ([first, ...rest]) => {
     return first.toUpperCase() + rest.join('');
 };
-// console.log(capitalize('fooBar'));
-// console.log(capitalize('nodeJs'));
+console.log(capitalize('fooBar'));
+ console.log(capitalize('nodeJs'));
 /* Q3 Using array.proto.map create function to use the capitalize method in Exercise 2 to upper case
 the first character of each Color in the following array..
 
@@ -43,7 +43,7 @@ the first character of each Color in the following array..
 const colors = ['red','green','blue']
 const capitalizedcolors = colors.map(color => capitalize(color))
 
-// console.log(capitalizedcolors)
+console.log(capitalizedcolors)
 
 
 /*Q4 Using array.proto.filter create a function that will filter out all the values of the array that are less
@@ -51,7 +51,7 @@ than twenty.*/
 var values = [1,60,34,30,20,5]
 const filterLessthan20 = values.filter(value => value < 20)
 
-// console.log(filterLessthan20)
+ console.log(filterLessthan20)
 
 
 /*Q5 Using array.proto.reduce create calculate the sum and product of a given array.*/
@@ -61,11 +61,11 @@ var array = [1,2,3,4]
 const sum = array.reduce((accumulator,currentValue)=>{
 return accumulator + currentValue
 },)
-// console.log("sum = " + sum)
+ console.log("sum = " + sum)
 const product = array.reduce((accumulator,currentValue)=>{
 return accumulator * currentValue
 },)
-// console.log("product = " + product)
+ console.log("product = " + product)
 
 
 /*Q6
