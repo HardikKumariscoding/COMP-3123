@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab EX 1</title>
+    
+</head>
+<body>
+    <h1>THIS IS LAB 1</h1>
+</body>
+<script>
+
+function capitalizer(text){
+    
+const myArray = text.split(" ");
+newarr = [];
+for ( let i = 0; i < myArray.length; i++){
+ 
+ newarr[i] = myArray[i].charAt(0).toUpperCase() + myArray[i].slice(1);
+ 
+ }
+ const result = newarr.join(" ");
+
+ console.log(result);
+ 
+}
+
+
+let text1 = "the quick brown fox";
+capitalizer(text1)
+
+
+function findlargest(arr){
+    if (arr.length === 0){
+        return "array is empty"
+    }
+
+    let largest = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if(arr[i] > largest)
+        {largest = arr[i];}
+        
+        
+    }
+  console.log(largest);
+}
+
+arr1 = [1000,510,440]
+arr2 = [0,-10,-20]
+
+findlargest(arr1);
+findlargest(arr2);
+
+   
+   
+function anglefinder(angle) {
+    if (angle < 0 || angle > 180) {
+        return 'Invalid angle';
+    } else if (angle < 90) {
+        return 'Acute angle';
+    } else if (angle === 90) {
+        return 'Right angle';
+    } else if (angle < 180) {
+        return 'Obtuse angle';
+    } else if (angle === 180) {
+        return 'Straight angle';
+    }
+}
+
+console.log(anglefinder(47))
+console.log(anglefinder(90))
+console.log(anglefinder(145))
+console.log(anglefinder(180))
+
+
+
+
+
+
+
+
+</script>
+</html>
