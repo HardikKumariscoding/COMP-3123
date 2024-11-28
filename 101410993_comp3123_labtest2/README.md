@@ -11,9 +11,6 @@ A simple weather app built with React that fetches real-time weather data and di
 - Displays the 5-day weather forecast.
 - Shows weather icons for different weather conditions (e.g., clear, cloudy, etc.).
 
-## Screenshots
-
-![Weather App Screenshot](./assets/weather-app-screenshot.png)
 
 ## Installation
 
